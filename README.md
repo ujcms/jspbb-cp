@@ -1,6 +1,11 @@
 # jspBB cp
 
-jspBB 的后台前端项目。
+jspbb-cp是jspBB的后台前端项目。使用TypeScript开发。基于react、ant-design 4、ant-design-pro 5。使用react hooks模式。
+
+需要配合jspBB主项目，jspBB项目地址：
+
+* jspBB项目github源码托管地址：[https://github.com/ujcms/jspbb](https://github.com/ujcms/jspbb)
+* jspBB项目gitee源码托管地址：[https://gitee.com/jspxcms/jspbb](https://gitee.com/jspxcms/jspbb)
 
 ## 搭建步骤
 

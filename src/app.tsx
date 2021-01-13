@@ -51,13 +51,17 @@ export async function getInitialState(): Promise<{
   const intervalRefreshToken = (interval: number, refreshToken: string | null) => {
     runRefreshToken(refreshToken);
     setInterval(() => {
-      runRefreshToken(refreshToken);
+      try {
+        runRefreshToken(refreshToken);
+      } catch (e) {
+        console.error(e);
+      }
     }, interval);
   };
   const refreshToken = getRefreshToken();
   const refreshAt = getRefreshAt();
   // 少一秒。避免request拦截器也执行refresh token操作。
-  const interval = 10 * 60 * 1000 - 1000;
+  const interval = 10 * 1000 - 1000;
   const afterTime = refreshAt + interval - new Date().getTime();
   // 1秒内直接执行，不用setTimeout。避免因延迟执行，导致request拦截器也执行refresh token操作。
   if (afterTime <= 1000) {

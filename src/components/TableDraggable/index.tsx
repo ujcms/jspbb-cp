@@ -1,25 +1,14 @@
 import React from 'react';
-import { useDrag, useDrop } from 'react-dnd';
+import {useDrag, useDrop} from 'react-dnd';
 import styles from './index.less';
 
 const type = 'DraggableRow';
-const DraggableRow = ({
-  index,
-  moveRow,
-  className,
-  style,
-  ...restProps
-}: {
-  index: number;
-  moveRow: any;
-  className: string;
-  style: {};
-}) => {
+const DraggableRow = ({index, moveRow, className, style, ...restProps}: { index: number, moveRow: any, className: string, style: {} }) => {
   const ref = React.useRef() as any;
-  const [{ isOver, dropClassName }, drop] = useDrop({
+  const [{isOver, dropClassName}, drop] = useDrop({
     accept: type,
-    collect: (monitor) => {
-      const { index: dragIndex } = monitor.getItem() || {};
+    collect: monitor => {
+      const {index: dragIndex} = monitor.getItem() || {};
       if (dragIndex === index) return {};
       return {
         isOver: monitor.isOver(),
@@ -31,8 +20,8 @@ const DraggableRow = ({
     },
   });
   const [, drag] = useDrag({
-    item: { type, index },
-    collect: (monitor) => ({
+    item: {type, index},
+    collect: monitor => ({
       isDragging: monitor.isDragging(),
     }),
   });
@@ -41,7 +30,7 @@ const DraggableRow = ({
     <tr
       ref={ref}
       className={`${className} ${isOver ? dropClassName : ''}`}
-      style={{ cursor: 'move', ...style }}
+      style={{cursor: 'move', ...style}}
       {...restProps}
     />
   );

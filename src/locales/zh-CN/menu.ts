@@ -59,6 +59,7 @@ export default {
   'menu.config.restrict': '约束设置',
   'menu.config.sensitiveWords': '敏感词',
   'menu.config.sensitiveStopWords': '敏感停用词',
+  'menu.config.sensitiveSplitWords': '敏感拆分词',
   'menu.user': '用户',
   'menu.user.role': '角色管理',
   'menu.user.group': '用户组管理',

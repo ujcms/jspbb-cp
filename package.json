@@ -1,6 +1,6 @@
 {
   "name": "jspbb-cp",
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "private": true,
   "description": "jspBB的后台前端项目",
   "scripts": {

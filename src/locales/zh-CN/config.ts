@@ -93,18 +93,13 @@ export default {
   'config.restrict.smsMax.tooltip': '每IP发送的短信超过条数后，将禁止发送短信',
   'config.restrict.smsWithin': '短信发送间隔时间(每IP)',
   'config.restrict.smsWithin.tooltip': '间隔时间过后，短信发送条数清零，重新计数',
-  'config.restrict.messageInterval': '信息发表最小间隔时间',
-  'config.restrict.messageMax': '信息发表最大条数',
-  'config.restrict.messageMax.tooltip': '信息发表超过条数后，将禁止发表消息',
-  'config.restrict.messageWithin': '信息发表限制间隔时间',
-  'config.restrict.messageWithin.tooltip': '间隔时间过后，信息发表条数清零，重新计数',
-  'config.restrict.uploadMax': '上传最大总长度',
-  'config.restrict.uploadMax.tooltip': '上传总长度超过后，将禁止上传',
-  'config.restrict.uploadWithin': '上传限制间隔时间',
-  'config.restrict.uploadWithin.tooltip': '间隔时间过后，上传总长度清零，重新计数',
+  'config.restrict.postInterval': '信息提交最小间隔时间',
   'config.restrict.mobileBlacklist': '手机号段黑名单',
   'config.restrict.mobileBlacklist.tooltip':
     '禁止发送短信验证码的号段，多个号段用英文逗号分开，如162,165,167,170,171,174',
+  'config.restrict.forbiddenTime': '非受信用户禁止发帖时段',
+  'config.restrict.forbiddenTime.tooltip':
+    '为防止黑产在半夜进行注册灌水，可设置夜间不允许发帖，多个时段用逗号分隔。如：20,21,22,23,0,1,2,3,4,5,6,7,8',
   'config.restrict.ipBlacklist': 'IP黑名单',
   'config.restrict.ipBlacklist.tooltip':
     '禁止所有访问，多个IP用英文逗号分开，如192.168.0.1,192.168.0.2',
